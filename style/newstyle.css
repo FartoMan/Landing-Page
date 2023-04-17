@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, main {
+    width: 100%;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.btn-sm, .btn-nova-conta {
+    display: inline-block;
+    line-height: 30px;
+    height: 30px;
+    width: fit-content;
+    padding: 0 30px;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.btn-sm{ 
+    border: 2px solid #fff4
+}
+
+.btn-nova-conta {
+    background-color: #0006;
+}
+
+.btn-nova-conta:hover {
+    background-color: #0003;
+}
+
+.btn-sm:hover {
+    background-color: #0006;
+    border: 2px solid #fff;
+}
+
+
+.corpo-bloco1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.corpo-bloco1 h2, .corpo-bloco1 p {
+    text-align: center;
+}
+
+.corpo-bloco1 h2 {
+    margin-bottom: 20px;
+}
+
+.corpo-bloco1 p {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0 50px;
+}
+
+.corpo-bloco1-btns {
+    margin-top: 30px;
+}
+
+
+@media (max-width: 800px){
+    main {
+        background-color: ;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .corpo-bloco1 p {
+        margin: 0;
+    }
+}

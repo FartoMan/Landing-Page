@@ -39,7 +39,6 @@ h3 {
     justify-content: space-between;
 }
 
-
 .corpo-bloco1-img {
     margin-top: 50px;
 }
@@ -87,18 +86,6 @@ h3 {
     background-color: #fff4;
 }
 
-@media (max-width: 800px) {
-    .corpo-bloco1 {
-        width: 100%;
-    }
-    .corpo-bloco1-texto {
-        width: 100%;
-        margin: 0;
-        height: auto;
-    }
-}
-
-
 .corpo-bloco2 {
     width: 80%;
     height: 94vh;
@@ -107,13 +94,6 @@ h3 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
-@media (max-width: 800px) {
-    .corpo-bloco2 {
-        width: 100%;
-        flex-direction: column;
-    }
 }
 
 .corpo-bloco2-imagem {
@@ -252,4 +232,26 @@ h3 {
     text-align: center;
     font-size: 20px;
     line-height: 32px;
+}
+
+@media (max-width: 800px) {
+    .corpo-bloco1, .corpo-bloco2, .corpo-bloco3, .corpo-bloco4, .corpo-bloco5 {
+        width: 100%;
+    }
+    .corpo-bloco1-texto {
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+    .corpo-bloco1-img {
+        max-width: 100%;
+    }
+
+    .corpo-bloco2 {
+        width: 100%;
+        flex-direction: column;
+    }
+    .corpo-bloco2-imagem {
+        height: max-content;
+    }
 }
