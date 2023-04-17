@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +10,25 @@ body, main {
     width: 100%;
 }
 
-h2 {
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloco {
+    display: flex;
+    height: 100vh;
+}
+
+h2, h3 {
     font-size: 2em;
+    font-family: 'MedievalSharp', cursive;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    letter-spacing: 2px;
 }
 
 .btn-sm, .btn-nova-conta {
@@ -20,17 +39,21 @@ h2 {
     padding: 0 30px;
     text-decoration: none;
     margin: 0 auto;
+    color: #fff;
 }
 
-.btn-sm{ 
+.btn-sm { 
+    background-color: #000;
     border: 2px solid #fff4
 }
 
 .btn-nova-conta {
+    border: 2px solid #fff;
     background-color: #0006;
 }
 
 .btn-nova-conta:hover {
+    border: 2px solid #0003;
     background-color: #0003;
 }
 
@@ -39,11 +62,11 @@ h2 {
     border: 2px solid #fff;
 }
 
-
 .corpo-bloco1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .corpo-bloco1 h2, .corpo-bloco1 p {
@@ -55,8 +78,6 @@ h2 {
 }
 
 .corpo-bloco1 p {
-    font-size: 1.3em;
-    line-height: 1.5em;
     text-align: center;
     margin: 0 50px;
 }
@@ -65,17 +86,77 @@ h2 {
     margin-top: 30px;
 }
 
+.corpo-bloco2 {
+    margin: 30px 50px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.corpo-bloco2-imagem {
+    width: 35%;
+    height: 100%;
+    background-image: linear-gradient(to right, #ffff, #fff0 50%, #fff0 95%, #ffff), url('../images/char2m.png');
+    background-size: cover;
+    background-position: 65%;
+    background-repeat: no-repeat;
+}
+
+/*.imgfade {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #ffff, #fff0 50%, #fff0 95%, #ffff);
+}*/
+
+.corpo-bloco2-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 65%;
+    height: 100%;
+    margin-left: 30px;
+}
+
 
 @media (max-width: 800px){
     main {
-        background-color: ;
+        background-color: black;
+        color: #fff;
     }
-
     img {
         width: 100%;
     }
-
+    .bloco {
+        margin: 0
+    }
     .corpo-bloco1 p {
         margin: 0;
+    }
+    .corpo-bloco2 {
+        flex-direction: column;
+    }
+    .corpo-bloco2-imagem {
+        position: absolute;
+        height: 30%;
+        width: 100%;
+        background-image: linear-gradient(to bottom, #000f, #0000 5%, #0000 50%, #000f), url('../images/char2m.png');
+        background-position: top;
+        z-index: 0;
+    }
+    .corpo-bloco2-texto {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        margin-top: 40%;
+    }
+    .corpo-bloco2-texto h3, .corpo-bloco2-texto p {
+        padding: 0px 15px;
+    }
+    .corpo-bloco2-texto h3 {
+        font-size: 1.5em;
+    }
+    .corpo-bloco2-texto p {
+            font-size: 1.2em;
+            line-height: 1.5em;
+            letter-spacing: 2px;
     }
 }
