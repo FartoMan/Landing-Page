@@ -1,38 +1,63 @@
-$('.col1').hover(function() {
-    $('.col1').css('background-color', '#0001');
-}, function() {
-    $('.col1').css('background-color', '#0004');
-});
+var col = document.getElementsByClassName('item')
+col[0].style.backgroundColor = '#0005'
+var colS = 0;
 
-$('.col2').hover(function() {
-    $('.col2').css('background-color', '#0001');
-}, function() {
-    $('.col2').css('background-color', '#0004');
-});
+var interval = setInterval(function() {
+    col[colS].style.backgroundColor = '#0005';
+    colS = colS + 1;
+    if(colS == 5) {colS = 0;}
+    unsetCol(colS)
+}, 1000)
 
-$('.col3').hover(function() {
-    $('.col3').css('background-color', '#0001');
-}, function() {
-    $('.col3').css('background-color', '#0004');
-});
+function autoCol(colS) {
+    setTimeout(interval, 500)
+}
 
-$('.col4').hover(function() {
-    $('.col4').css('background-color', '#0001');
-}, function() {
-    $('.col4').css('background-color', '#0004');
-});
-
-$('.col5').hover(function() {
-    $('.col5').css('background-color', '#0001');
-}, function() {
-    $('.col5').css('background-color', '#0004');
-});
+/*function setCol(colS) {
+    if (colS==0) {
+        for(let i = 0; i < 2; i++) {
+            col[0].style.backgroundColor = '#000';
+        }
+        unsetCol(colS);
+        clearInterval(interval)
+    }
+    if (colS==1) {
+        for(let i = 0; i < 2; i++) {
+            col[1].style.backgroundColor = '#000';
+        }
+        unsetCol(colS);
+    }
+    if (colS==2) {
+        for(let i = 0; i < 2; i++) {
+            col[2].style.backgroundColor = '#000';
+        }
+        unsetCol(colS);
+    }
+    if (colS==3) {
+        for(let i = 0; i < 2; i++) {
+            col[3].style.backgroundColor = '#000';
+        }
+        unsetCol(colS);
+    }
+    if (colS==4) {
+        for(let i = 0; i < 2; i++) {
+            col[4].style.backgroundColor = '#000';
+        }
+        unsetCol(colS);
+    }
+}*/
+function unsetCol(colS) {
+        for(let i = 0; i < col.length; i++) {
+            col[i].style.backgroundColor = '#fff5';
+            col[colS].style.backgroundColor = '#0005';
+        
+    }
+}
 
 // TROCAR IMAGENS DAS CLASSES
 $(document).ready(function() {
     $('#bk').hover(function() {
         $('#imgclasse').css('background-image', "url('images/bladeknight.png')");
-        $('#bk').css('background-color', '#0003');
     });
     $('#sm').hover(function() {
         $('#imgclasse').css('background-image', "url('images/soulmaster.png')");
