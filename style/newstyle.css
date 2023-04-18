@@ -35,7 +35,6 @@ p {
     display: inline-block;
     line-height: 30px;
     height: 30px;
-    width: fit-content;
     padding: 0 30px;
     text-decoration: none;
     margin: 0 auto;
@@ -88,6 +87,7 @@ p {
 
 .corpo-bloco2 {
     margin: 30px 50px;
+    margin-right: 0;
     flex-direction: row;
     align-items: center;
 }
@@ -115,7 +115,116 @@ p {
     height: 100%;
     margin-left: 30px;
 }
+.corpo-bloco2-texto-subt1 {
+    padding-top: 30px;
+}
+.corpo-bloco2-texto-paragrafo1 {
+    background-color: #0003;
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+.corpo-bloco2-texto-paragrafo2 {
+    background-color: #0003;
+    margin-right: 0;
+    border-radius: 15px 0px 0 15px;
+    padding-left: 15px;
+}
 
+.corpo-bloco3 {
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.corpo-bloco3-texto {
+    text-align: center;
+}
+.corpo-bloco3-texto h3, .corpo-bloco3-texto-paragrafo{
+    margin-top: 15px;
+    padding: 0 30px;
+}
+.corpo-bloco3-tabela {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.tlinha {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.corpo-bloco3-tabela-imagens {
+}
+.corpo-bloco3-tabela-texto {
+    text-align: center;
+    align-items: center;
+    height: 50px;
+}
+.col1, .col2, .col3, .col4, .col5 {
+    width: 150px;
+}
+.corpo-bloco3-tabela img {
+}
+.corpo-bloco3-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.corpo-bloco3-rodape p {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0 50px;
+    padding: 5px 10px;
+    background-color: #0009;
+    border-radius: 20px;
+    color:white
+}
+.corpo-bloco3 a {
+    margin-bottom: 15px;
+}
+
+
+.corpo-bloco4 {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.corpo-bloco4-classes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+.corpo-bloco4-classes-texto {
+    width: 50%;
+    line-height: 60px;
+    margin-left: 30px;
+}
+.corpo-bloco4-classes-texto ul>li {
+    font-family: 'MedievalSharp', cursive;
+    padding-left: 15px;
+    list-style-type: none;
+    background-color: #0005;
+}
+.corpo-bloco4-classes-texto ul>li:hover {
+    background-color: #0003;
+}
+.corpo-bloco4-classes-img {
+    background-image: url('../images/bladeknight.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #0003;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+}
 
 @media (max-width: 800px){
     main {
@@ -132,10 +241,17 @@ p {
         margin: 0;
     }
     .corpo-bloco2 {
+        display: flex;
         flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        margin-top: 70px;
     }
     .corpo-bloco2-imagem {
         position: absolute;
+        top: 0;
         height: 30%;
         width: 100%;
         background-image: linear-gradient(to bottom, #000f, #0000 5%, #0000 50%, #000f), url('../images/char2m.png');
@@ -147,16 +263,49 @@ p {
         height: 100%;
         z-index: 1;
         margin-top: 40%;
+        margin-left: 0;
     }
     .corpo-bloco2-texto h3, .corpo-bloco2-texto p {
-        padding: 0px 15px;
+        padding: 5px 15px;
     }
-    .corpo-bloco2-texto h3 {
-        font-size: 1.5em;
+    .corpo-bloco2-texto h3{
+        font-size: 1.5em + 1.5em;
     }
     .corpo-bloco2-texto p {
-            font-size: 1.2em;
+            font-size: 1.2em + 1.2vw;
             line-height: 1.5em;
-            letter-spacing: 2px;
+            background-color: #fff7;
     }
+    .corpo-bloco2-texto-paragrafo1 {
+        border-radius: 20px 0 0 20px;
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    .corpo-bloco2-texto-paragrafo2 {
+        padding-left: 0;
+        margin-right: 5px;
+        border-radius: 0 20px 20px 0;
+    }
+    .corpo-bloco2 .btn-nova-conta {
+        margin-bottom: 15px;
+    }
+    .corpo-bloco3 {
+        justify-content: baseline;
+        align-items: center;
+        height: 150vh;
+        margin-top: 140px;
+    }
+    .corpo-bloco3-texto {
+        background-color: #fff6;
+        padding: 30px 0;
+    }
+    .corpo-bloco3-rodape p {
+        font-size: 1.35em;
+        margin: 0px;
+        padding: 15px 15px;
+        background-color: #fff6;
+        border-radius: 0;
+    }
+
+
 }

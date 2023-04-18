@@ -31,25 +31,26 @@ $('.col5').hover(function() {
 // TROCAR IMAGENS DAS CLASSES
 $(document).ready(function() {
     $('#bk').hover(function() {
-        $('#imgclasse').attr('src', 'images/bladeknight.png');
+        $('#imgclasse').css('background-image', "url('images/bladeknight.png')");
+        $('#bk').css('background-color', '#0003');
     });
     $('#sm').hover(function() {
-        $('#imgclasse').attr('src', 'images/soulmaster.png');
+        $('#imgclasse').css('background-image', "url('images/soulmaster.png')");
     });
     $('#ef').hover(function() {
-        $('#imgclasse').attr('src', 'images/elfa.png');
+        $('#imgclasse').css('background-image', "url('images/elfa.png')");
     });
     $('#mg').hover(function() {
-        $('#imgclasse').attr('src', 'images/magicgladiator.png');
+        $('#imgclasse').css('background-image', "url('images/magicgladiator.png')");
     });
     $('#dl').hover(function() {
-        $('#imgclasse').attr('src', 'images/darklord.png');
+        $('#imgclasse').css('background-image', "url('images/darklord.png')");
     });
     $('#sum').hover(function() {
-        $('#imgclasse').attr('src', 'images/summoner.png');
+        $('#imgclasse').css('background-image', "url('images/summoner.png')");
     });
     $('#rf').hover(function() {
-        $('#imgclasse').attr('src', 'images/ragefighter.png');
+        $('#imgclasse').css('background-image', "url('images/ragefighter.png')");
     });
     
 });
