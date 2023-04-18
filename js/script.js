@@ -49,6 +49,8 @@ function autoCol(colS) {
 function unsetCol(colS) {
         for(let i = 0; i < col.length; i++) {
             col[i].style.backgroundColor = '#fff5';
+            col[i].style.filter = 'opacity(50%)'
+            col[colS].style.filter = 'opacity(100%)'
             col[colS].style.backgroundColor = '#0005';
         
     }
