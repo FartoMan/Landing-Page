@@ -1,3 +1,5 @@
+
+
 var col = document.getElementsByClassName('item')
 col[0].style.backgroundColor = '#0005'
 var colS = 0;
@@ -7,10 +9,10 @@ var interval = setInterval(function() {
     colS = colS + 1;
     if(colS == 5) {colS = 0;}
     unsetCol(colS)
-}, 1000)
+}, 1500)
 
 function autoCol(colS) {
-    setTimeout(interval, 500)
+    setTimeout(interval, 1000)
 }
 
 /*function setCol(colS) {
@@ -46,10 +48,15 @@ function autoCol(colS) {
         unsetCol(colS);
     }
 }*/
+var xy = window.matchMedia('(max-width: 800px)')
 function unsetCol(colS) {
         for(let i = 0; i < col.length; i++) {
             col[i].style.backgroundColor = '#fff5';
-            col[i].style.filter = 'opacity(50%)'
+            col[i].style.filter = 'opacity(50%)';
+            if(xy.matches) {
+                col[i].style.display = 'none';
+            }
+            col[colS].style.display = 'flex';
             col[colS].style.filter = 'opacity(100%)'
             col[colS].style.backgroundColor = '#0005';
         

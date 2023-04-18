@@ -30,6 +30,8 @@ main {
 .bloco {
     display: flex;
     height: 100vh;
+    width: 80%;
+    margin: 0 auto;
 }
 
 h2, h3 {
@@ -93,19 +95,22 @@ p {
     text-align: center;
     margin: 0 50px;
 }
+.corpo-bloco1-subtitulo {
+    font-size: 2.3em;
+}
 
 .corpo-bloco1-btns {
     margin-top: 30px;
 }
 
 .corpo-bloco2 {
-    margin: 30px 50px;
-    margin-right: 0;
+    margin: 30px auto;
     flex-direction: row;
     align-items: center;
 }
 
 .corpo-bloco2-imagem {
+    display: none;
     width: 35%;
     height: 100%;
     background-image: url('../images/char2m.png');
@@ -121,19 +126,14 @@ p {
     box-shadow: inset 0 0 25px #000;
 }
 
-/*.imgfade {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, #ffff, #fff0 50%, #fff0 95%, #ffff);
-}*/
-
 .corpo-bloco2-texto {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 65%;
+    align-items: center;
+    text-align: center;
+    width: 100%;
     height: 100%;
-    margin-left: 30px;
 }
 .corpo-bloco2-texto-subt1 {
     padding-top: 30px;
@@ -145,10 +145,9 @@ p {
     margin-right: 30px;
 }
 .corpo-bloco2-texto-paragrafo2 {
-    background-color: #0003;
-    margin-right: 0;
-    border-radius: 15px 0px 0 15px;
-    padding-left: 15px;
+    background-color: #0005;
+    border-radius: 15px;
+    padding: 25px 25%;
 }
 
 .corpo-bloco3 {
@@ -169,7 +168,7 @@ p {
     width: 80%;
     margin: 0 auto;
     padding: 5px;
-    background-color: rgba(112, 0, 0, 0.726);
+    background-color: #700000b9;
     border-radius: 5px;
     box-shadow: 0 0 15px #750000;
 }
@@ -178,6 +177,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
     align-items: center;
     text-align: center;
     filter: opacity(50%);
@@ -190,6 +190,10 @@ p {
     font-size: 1.2em;
     line-height: 30px;
     vertical-align: middle;
+}
+
+.hidden {
+    display: flex;
 }
 
 .corpo-bloco3-rodape {
@@ -217,23 +221,33 @@ p {
     justify-content: space-around;
     align-items: center;
 }
+.corpo-bloco4-lvlmax-txt {
+    font-size: 1em;
+}
 .corpo-bloco4-classes {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
     height: 500px;
+    background-color: #750000b9;
+    
+    box-shadow: 0 0 15px #750000;
 }
 .corpo-bloco4-classes-texto {
     width: 50%;
-    line-height: 60px;
+    line-height: 55px;
     margin-left: 30px;
 }
 .corpo-bloco4-classes-texto ul>li {
-    font-family: 'MedievalSharp', cursive;
+    font-size: 1.3em;
     padding-left: 15px;
+    margin: 5px 0;
     list-style-type: none;
     background-color: #0005;
+    border-radius: 15px;
+    box-shadow: 0 0 3px #fff5;
 }
 .corpo-bloco4-classes-texto ul>li:hover {
     background-color: #0003;
@@ -243,28 +257,40 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 50%;
+    border-radius: 30px;
+    width: 43%;
+    height: 470px;
+    padding-right: 15px;
     display: flex;
     justify-content: center;
     background-color: #0003;
-    height: 500px;
     overflow: hidden;
     text-align: center;
+    box-shadow: 0 0 5px #fff3;
 }
 
 .corpo-bloco5 {
     height: 100vh;
+    width: 98vw;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
 }
 .corpo-bloco5-img {
+    background-color: #0002;
     height: 300px;
     width: 100%;
-    background-image: linear-gradient(to bottom, #ffff, #fff0 5%, #fff0 70%, #ffff), url('../images/char3d.png');
+    background-image: linear-gradient(to bottom, #000f, #0000 5%, #0000 70%, #000f), url('../images/char3d.png');
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 0 0 10px #000;
+}
+.corpo-bloco5-texto {
+    width: 75%;
+}
+.corpo-bloco5 .btn-nova-conta {
+    margin-bottom: 50px;
 }
 
 @media (max-width: 800px){
@@ -275,11 +301,19 @@ p {
     img {
         width: 100%;
     }
+    .btn-nova-conta, .btn-sm {
+        font-size: 1.3em;
+        padding: 0 15px;
+    }
     .bloco {
-        margin: 0
+        width: 100%;
+        margin: 0px auto;
     }
     .corpo-bloco1 p {
         margin: 0;
+    }
+    .corpo-bloco1-subtitulo {
+        font-size: 1.7em;
     }
     .corpo-bloco2 {
         display: flex;
@@ -291,6 +325,7 @@ p {
         margin-top: 70px;
     }
     .corpo-bloco2-imagem {
+        display: flex;
         position: absolute;
         top: 0;
         height: 30%;
@@ -331,7 +366,7 @@ p {
         margin-bottom: 15px;
     }
     .corpo-bloco3 {
-        justify-content: baseline;
+        justify-content: space-around;
         align-items: center;
         height: 125vh;
         margin-top: 120px;
@@ -339,6 +374,12 @@ p {
     .corpo-bloco3-texto {
         background-color: #fff6;
         padding: 30px 0;
+    }
+    .corpo-bloco3-tabela-item {
+        width: 60%;
+    }
+    .hidden {
+        display: none;
     }
     .corpo-bloco3-rodape p {
         font-size: 1.35em;
