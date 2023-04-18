@@ -226,6 +226,14 @@ p {
     text-align: center;
 }
 
+.corpo-bloco5 {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
 @media (max-width: 800px){
     main {
         background-color: black;
