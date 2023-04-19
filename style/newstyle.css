@@ -85,29 +85,27 @@ main {
     background-image: url('../images/bg-ss1.jpg');
     background-position: top;
     background-size: cover;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;   
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
 }
-
-.corpo-bloco1 h2 {
-    margin-bottom: 20px;
-}
-
 .corpo-bloco1-texto {
-    position: absolute;
+    margin-right: 4%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.corpo-bloco1-texto .l1 {
     font-family: Banner;
-    top: 5%;
-    right: 2%;
-    text-align: right;
-    font-size: 3.8em;
-    margin-top: 40px;
+    font-size: 3.5em;
     color: #b30000;
 }
-.corpo-bloco1-texto1 {
-    position: absolute;
+.corpo-bloco1-texto .l2 {
     font-family: brigt;
-    bottom: 5%;
-    right: 8%;
-    text-align: right;
     font-size: 2.1em;
     margin-bottom: 40px;
     color: #fff;
