@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+@font-face {
+    font-family: Banner;
+    src: url('../fonts/BANNER.ttf');
+}
+
+@font-face {
+    font-family: palm-beach;
+    src: url('../fonts/PalmBeach.ttf');
+}
+
+@font-face {
+    font-family: brigt;
+    src: url('../fonts/Brightness.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +24,9 @@
 
 body {
     background-color: #000;
-    background-image: url('../images/bg.jpg');
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     box-shadow: inset;
 }
@@ -24,24 +38,14 @@ body, main {
 main {
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
 }
 
 .bloco {
     display: flex;
     height: 100vh;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-}
-
-h2, h3 {
-    font-size: 1.7em;
-}
-
-p {
-    font-size: 1.2em;
-    line-height: 1.5em;
-    letter-spacing: 2px;
 }
 
 .btn-sm, .btn-nova-conta {
@@ -77,78 +81,101 @@ p {
 }
 
 .corpo-bloco1 {
+    position: relative;
+    background-image: url('../images/bg-ss1.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.corpo-bloco1 h2, .corpo-bloco1 p {
-    text-align: center;
+    
 }
 
 .corpo-bloco1 h2 {
     margin-bottom: 20px;
 }
 
-.corpo-bloco1 p {
-    text-align: center;
-    margin: 0 50px;
-}
-.corpo-bloco1-subtitulo {
-    font-size: 2.3em;
+.corpo-bloco1-texto {
+    position: relative;
+    font-family: Banner;
+    right: 15px;
+    text-align: right;
+    font-size: 4em;
+    margin-top: 40px;
+    color: #b30000;
 }
 
-.corpo-bloco1-btns {
-    margin-top: 30px;
+.corpo-bloco1 p > a {
+    text-decoration: none;
+    font-family: Banner;
 }
 
 .corpo-bloco2 {
-    margin: 30px auto;
-    flex-direction: row;
-    align-items: center;
-}
-
-.corpo-bloco2-imagem {
-    display: none;
-    width: 35%;
-    height: 100%;
-    background-image: url('../images/char2m.png');
+    background-image: url('../images/bg-ss2.jpg');
+    width: 100%;
+    background-position: center;
     background-size: cover;
-    background-position: 65%;
-    background-repeat: no-repeat;
-    box-shadow: 3px 3px 15px #000;
-    background-color: #0001;
-}
-.filtro {
+    background-position: top;
+    position: relative;
     width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 25px #000;
 }
 
-.corpo-bloco2-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+.corpo.bloco2.texto {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
-.corpo-bloco2-texto-subt1 {
-    padding-top: 30px;
+.corpo-bloco2-texto-titulo > h2 {
+    font-family: brigt;
+    font-size: 2.8em;
+    color: #ffffff;
+    text-shadow: 0 0 2px #ca3434;
+    line-height: 75px;
 }
-.corpo-bloco2-texto-paragrafo1 {
-    background-color: #0003;
-    padding: 10px;
-    border-radius: 15px;
-    margin-right: 30px;
+.corpo-bloco2-texto-titulo {
+    position: absolute;
+    width: 100%;
+    height: 88%;
 }
-.corpo-bloco2-texto-paragrafo2 {
-    background-color: #0005;
-    border-radius: 15px;
-    padding: 25px 25%;
+.tt1 {
+    position: absolute;
+    width: 98%;
+    top: 100px;
+    text-align: center;
 }
+.tt2 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-size: 2.7em;
+}
+
+
+.corpo-bloco2-texto-paragrafo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.corpo-bloco2-texto-paragrafo > p {
+    width: 98vw;
+    margin: 5% auto;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: brigt;
+    color: #ffa3a3;
+}
+
+.corpo-bloco2-btns {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 .corpo-bloco3 {
     margin-top: 50px;
@@ -323,16 +350,6 @@ p {
         height: 100vh;
         width: 100%;
         margin-top: 70px;
-    }
-    .corpo-bloco2-imagem {
-        display: flex;
-        position: absolute;
-        top: 0;
-        height: 30%;
-        width: 100%;
-        background-image: linear-gradient(to bottom, #000f, #0000 5%, #0000 50%, #000f), url('../images/char2m.png');
-        background-position: top;
-        z-index: 0;
     }
     .corpo-bloco2-texto {
         width: 100%;
